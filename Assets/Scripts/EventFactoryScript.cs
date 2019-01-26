@@ -9,7 +9,7 @@ public class EventFactoryScript : MonoBehaviour
 
     public float delay = 10.0f;
     public int timer = 0;
-    public int positionNumber = 10;
+    public int positionNumber = 3;
     float spawnTimer = 0.0f;
     float seconds = 0.0f;
 
