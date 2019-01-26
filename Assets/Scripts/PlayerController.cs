@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     Rigidbody2D rb;
     Player player;
+    Vector3 doorTarget;
 
     // Start is called before the first frame update
     void Start()
@@ -21,12 +22,29 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (player.GetButtonDown("ButtonA"))
+        {
+            Debug.Log(doorTarget.ToString());
+            if(doorTarget != new Vector3())
+            {
+                Vector3 t = transform.position;
+                transform.position = doorTarget;
+                doorTarget = t;
+            }
+        }
     }
 
     void FixedUpdate()
     {
         vertical = player.GetAxis("Move horizontal") * Time.deltaTime * 50f * speed;
         rb.MovePosition(rb.position + new Vector2(vertical, 0) * Time.fixedDeltaTime);
+    }
+    public void DoorPos(Vector3 pos)
+    {
+        doorTarget = pos;
+    }
+    public Vector3 GetPos()
+    {
+        return doorTarget;
     }
 }
