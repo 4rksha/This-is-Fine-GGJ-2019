@@ -17,7 +17,7 @@ public class CharacterAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(rb.velocity.x > 0)
+       if(Input.GetAxis("Horizontal") > 0)
         {
             animator.SetBool("isWalking", true);
         }
