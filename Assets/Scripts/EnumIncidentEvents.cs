@@ -8,7 +8,7 @@ public class EnumIncidentEvents : MonoBehaviour
 
     public static string ToString(IncidentEvent ie)
     {       
-        return ie.ToString() + "Prefab";
+        return ie.ToString() + "PrefabV2";
     }
 
 }

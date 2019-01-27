@@ -125,8 +125,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nbInput: 10
-  sprite01: {fileID: 21300000, guid: be44b06e2a6814ee49a6a15661ddd87c, type: 3}
-  sprite02: {fileID: 21300000, guid: 4b10407adc8994e0198446809564dd45, type: 3}
+  spriteButton01: {fileID: 21300000, guid: be44b06e2a6814ee49a6a15661ddd87c, type: 3}
+  spriteButton02: {fileID: 21300000, guid: 4b10407adc8994e0198446809564dd45, type: 3}
+  spriteAsset01: {fileID: 21300000, guid: 3fc2bbd409bf34ab6af1637bab569da1, type: 3}
+  spriteAsset02: {fileID: 21300000, guid: 8a8849b7b8b964564b9e89cb1ded0658, type: 3}
 --- !u!1 &8301314091882300703
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8301314091882300703}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6082247743553281563}
@@ -195,14 +197,14 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3fc2bbd409bf34ab6af1637bab569da1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

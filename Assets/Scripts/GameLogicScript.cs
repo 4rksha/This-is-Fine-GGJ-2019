@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameLogicScript : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class GameLogicScript : MonoBehaviour
     private int remainingTime;
     public Canvas victoryText;
     public Canvas defeatText;
+
+    public GameObject timeLeft;
+    public GameObject HealthLeft;
 
     bool isGameWon = false;
     int seconds = 0;
@@ -42,7 +46,13 @@ public class GameLogicScript : MonoBehaviour
             seconds += 1;
             remainingTime = gameDuration - seconds;
 
-            houseHealth -= GameObject.FindGameObjectsWithTag("event").Length * damagePerActiveIncident;
+            if (houseHealth > 0)
+            {
+                houseHealth -= GameObject.FindGameObjectsWithTag("event").Length * damagePerActiveIncident;
+                HealthLeft.GetComponent<TextMeshProUGUI>().text = houseHealth.ToString();
+                timeLeft.GetComponent<TextMeshProUGUI>().text = remainingTime.ToString();
+            }
+            
 
             if (remainingTime <= 0)
             {
