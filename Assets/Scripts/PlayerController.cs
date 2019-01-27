@@ -43,8 +43,18 @@ public class PlayerController : MonoBehaviour
     {
         doorTarget = pos;
     }
+
     public Vector3 GetPos()
     {
         return doorTarget;
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (GetPos() != collision.gameObject.transform.position)
+        {
+            DoorPos(new Vector3());
+        }
+    }
+
 }

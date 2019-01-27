@@ -10,6 +10,7 @@ public class spamScript : MonoBehaviour
     private int playerId;
     Player player;
     private SpriteRenderer sprite;
+    public int damage = 2;
 
     // Start is called before the first frame update
     void Start()

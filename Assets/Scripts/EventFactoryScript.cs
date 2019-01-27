@@ -69,7 +69,7 @@ public class EventFactoryScript : MonoBehaviour
             count--;
             if (count == 0)
             {
-                Debug.Log("on passe ici");
+                //Debug.Log("on passe ici");
                 nextEventIndex = nextEventIndex >= events.Keys.Count() - 1 ? 0 : nextEventIndex + 1;
                 if (positionNumber > goArray.Length)
                 {
@@ -91,7 +91,7 @@ public class EventFactoryScript : MonoBehaviour
                     break;
                 }
             }
-            Debug.Log(isAlreadyActive);
+            //Debug.Log(isAlreadyActive);
         } while (isAlreadyActive);
 
         UnityEngine.Object res = Resources.Load(EnumIncidentEvents.ToString(newIncident));
