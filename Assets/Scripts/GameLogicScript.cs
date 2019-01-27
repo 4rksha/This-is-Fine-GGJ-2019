@@ -12,6 +12,7 @@ public class GameLogicScript : MonoBehaviour
     private int remainingTime;
     public Canvas victoryText;
     public Canvas defeatText;
+    public Slider sliderLife;
 
     public GameObject timeLeft;
     public GameObject HealthLeft;
@@ -34,7 +35,7 @@ public class GameLogicScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        sliderLife.value =  houseHealth;
 
 
     }
