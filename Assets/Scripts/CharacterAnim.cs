@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Rewired;
 
 public class CharacterAnim : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class CharacterAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Horizontal") != 0)
+        if (GetComponent<PlayerController>().player.GetAxis("Move horizontal") != 0)
         {
             animator.SetBool("isWalking", true);
         }
@@ -27,11 +28,11 @@ public class CharacterAnim : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
-        if (Input.GetAxis("Horizontal") < 0)
+        if (GetComponent<PlayerController>().player.GetAxis("Move horizontal") < 0)
         {
             sprite.flipX = true;
         }
-        else if (Input.GetAxis("Horizontal") > 0)
+        else if (GetComponent<PlayerController>().player.GetAxis("Move horizontal") > 0)
         {
             sprite.flipX = false;
         }

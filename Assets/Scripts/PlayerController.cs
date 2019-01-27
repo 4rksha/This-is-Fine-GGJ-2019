@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private float vertical;
     public float speed = 5f;
     Rigidbody2D rb;
-    Player player;
+    public Player player;
     Vector3 doorTarget;
 
     // Start is called before the first frame update
