@@ -940,7 +940,7 @@ PrefabInstance:
     - target: {fileID: 791487160953068625, guid: 76582eb45e490b14895f4cb439ac3cea,
         type: 3}
       propertyPath: delay
-      value: 3.5
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 791487160953068625, guid: 76582eb45e490b14895f4cb439ac3cea,
         type: 3}
